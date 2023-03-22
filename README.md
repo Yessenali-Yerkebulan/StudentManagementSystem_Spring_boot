@@ -7,7 +7,6 @@
 <li>Spring JPA</li>
 <li>Spring Thymeleaf</li>
 <li>Spring MVC</li>
-<li>Registration and Login</li>
 </ul>
 
 <h4>Main Page</h4>
