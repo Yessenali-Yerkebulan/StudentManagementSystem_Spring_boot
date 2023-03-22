@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="layout/header :: header"/>
+<body>
+<div th:replace="layout/header :: navbar"/>
+	<div>
+		<h2 class="mt-5 text-center">Student Registration</h2>
+		<tr>
+		<div align="left">
+		<h3><a class="btn btn-success m-3" th:href="@{'/Student/addstudent'}">Add new</a></h3>
+		</div>
+		</tr>
+	</div>
+	<div class="col-sm-12" align="center">
+		<div classs="panel-body" align="center">
+			<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th>Student ID</th>
+					<th>Student Name</th>
+					<th>Course Name</th>
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr th:each="student : ${liststudent}">
+						<td th:text="${student.id}">Student ID</td>
+						<td th:text="${student.stname}">Student name</td>
+						<td th:text="${student.coursename}">Course</td>
+						<td>
+							<a class="btn btn-primary mb-3" th:href="@{'/Student/edit/'+${student.id}}">Edit</a>
+						</td>
+						<td>
+							<a class="btn btn-danger mb-3" th:href="@{'/Student/delete/'+${student.id}}">Delete</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

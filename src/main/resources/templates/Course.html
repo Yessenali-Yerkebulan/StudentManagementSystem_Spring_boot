@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="layout/header :: header"/>
+<body>
+<div th:replace="layout/header :: navbar"/>
+	<div>
+		<h2 class="mt-5 text-center">Course Creation</h2>
+		<tr>
+		<div align="left">
+			<h3><a class="btn btn-success m-3" th:href="@{'/Course/addcourse'}">Add new</a></h3>
+		</div>
+		<tr>
+		<div class="col-sm-12" align="center">
+		<div class="panel-body" align="center">
+			<table class="table table-striped">
+				<thead class="thead-dark">
+				<tr>
+				<th>Course ID</th>
+				<th>Course Name</th>
+				<th>Duration</th>
+				<th>Edit</th>
+				<th>Delete</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr th:each="course : ${listcourse}">
+						<td th:text="${course.id}">Course ID</td>
+						<td th:text="${course.coursename}">Course Name</td>
+						<td th:text="${course.duration}">Duration</td>
+						<td>
+							<a class="btn btn-primary mb-3" th:href="@{'/Course/edit/'+${course.id}}">Edit</a>
+						</td>
+						<td>
+							<a class="btn btn-danger mb-3" th:href="@{'/Course/delete/'+${course.id}}">Delete</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

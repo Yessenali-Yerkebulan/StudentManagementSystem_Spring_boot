@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="layout/header :: header"/>
+<body>
+<div th:replace="layout/header :: navbar"/>
+	<div align="center">
+		<h1 class="mt-5 text-center">Create New Course</h1>
+		<br/>
+		<div class="col-sm-4">
+		<form action="#" th:action="@{/Course/save}" th:object="${course}" method="post">
+			<div alight="left">
+				<tr>
+					<label class="form-label">Course Name</label>
+					<td>
+						<input type="hidden" th:field="*{id}"/>
+						<input type="text" th:field="*{coursename}" class="form-control" placeholder="Course Name"/>
+					</td>
+				</tr>
+			</div>
+			<div alight="left">
+				<tr>
+					<label class="form-label">Duration</label>
+					<td>
+						<input type="text" th:field="*{duration}" class="form-control" placeholder="Duration"/>
+					</td>
+				</tr>
+			</div>
+			<br>
+			<tr>
+			<td colspan="2"><button type="submit" class="btn btn-info">Save</button></td>
+			</tr>
+		</form>
+		</div>
+	</div>
+</body>
+</html>
