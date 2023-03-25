@@ -1,5 +1,5 @@
 # StudentManagementSystem_Spring_boot
-<h3>My pet Spring boot project to practice what I learned!</h3><br/>
+<h3>MySpring boot project to practice what I learned!</h3><br/>
 <h3>Simple Student Management System system with OneToMany relationship, Login, Register, as Frontend used Bootstrap, Database MySQL</h3><br/>
 <h4><a href="https://www.youtube.com/watch?v=Pc_2ITi55C0&t=145s">Video<a/></h4>
 <hr/>
